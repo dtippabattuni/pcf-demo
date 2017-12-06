@@ -1,0 +1,74 @@
+cf-attendee-service-code $ cf push
+Using manifest file /Users/dtippabattuni/Downloads/pcf-examples-code/pcf-attendee-service-code/manifest.yml
+
+Creating app attendee in org adakids / space dev as .tippabattuni@hotmail.com...
+OK
+
+Creating route attendee-nonintercepting-apolune.cfapps.io...
+OK
+
+Binding attendee-nonintercepting-apolune.cfapps.io to attendee...
+OK
+
+Uploading attendee...
+Uploading app files from: /var/folders/g0/9s43k32n42s_f3pb8fmb57_m0000gn/T/unzipped-app728747154
+Uploading 466.8K, 102 files
+Done uploading               
+OK
+Binding service attendee-mysql to app attendee in org adakids / space dev as .tippabattuni@hotmail.com...
+OK
+
+Starting app attendee in org adakids / space dev as .tippabattuni@hotmail.com...
+Downloading java_buildpack...
+Downloaded java_buildpack
+Creating container
+Successfully created container
+Downloading app package...
+Downloaded app package (27.9M)
+-----> Java Buildpack v4.5 (offline) | https://github.com/cloudfoundry/java-buildpack.git#ffeefb9
+-----> Downloading Jvmkill Agent 1.10.0_RELEASE from https://java-buildpack.cloudfoundry.org/jvmkill/trusty/x86_64/jvmkill-1.10.0_RELEASE.so (found in cache)
+-----> Downloading Open Jdk JRE 1.8.0_141 from https://java-buildpack.cloudfoundry.org/openjdk/trusty/x86_64/openjdk-1.8.0_141.tar.gz (found in cache)
+       Expanding Open Jdk JRE to .java-buildpack/open_jdk_jre (1.4s)
+-----> Downloading Open JDK Like Memory Calculator 3.9.0_RELEASE from https://java-buildpack.cloudfoundry.org/memory-calculator/trusty/x86_64/memory-calculator-3.9.0_RELEASE.tar.gz (found in cache)
+       Loaded Classes: 16356, Threads: 300
+-----> Downloading Client Certificate Mapper 1.2.0_RELEASE from https://java-buildpack.cloudfoundry.org/client-certificate-mapper/client-certificate-mapper-1.2.0_RELEASE.jar (found in cache)
+-----> Downloading Container Security Provider 1.8.0_RELEASE from https://java-buildpack.cloudfoundry.org/container-security-provider/container-security-provider-1.8.0_RELEASE.jar (found in cache)
+-----> Downloading Spring Auto Reconfiguration 1.12.0_RELEASE from https://java-buildpack.cloudfoundry.org/auto-reconfiguration/auto-reconfiguration-1.12.0_RELEASE.jar (found in cache)
+Exit status 0
+Uploading droplet, build artifacts cache...
+Uploading build artifacts cache...
+Uploading droplet...
+Uploaded build artifacts cache (132B)
+Uploaded droplet (74.3M)
+Uploading complete
+Stopping instance e081727e-b21a-4047-89d7-2ff40250f3a0
+Destroying container
+Successfully destroyed container
+
+0 of 1 instances running, 1 starting
+0 of 1 instances running, 1 starting
+0 of 1 instances running, 1 starting
+0 of 1 instances running, 1 starting
+1 of 1 instances running
+
+App started
+
+
+OK
+
+App attendee was started using this command `JAVA_OPTS="-agentpath:$PWD/.java-buildpack/open_jdk_jre/bin/jvmkill-1.10.0_RELEASE=printHeapHistogram=1 -Djava.io.tmpdir=$TMPDIR -Djava.ext.dirs=$PWD/.java-buildpack/container_security_provider:$PWD/.java-buildpack/open_jdk_jre/lib/ext -Djava.security.properties=$PWD/.java-buildpack/security_providers/java.security $JAVA_OPTS" && CALCULATED_MEMORY=$($PWD/.java-buildpack/open_jdk_jre/bin/java-buildpack-memory-calculator-3.9.0_RELEASE -totMemory=$MEMORY_LIMIT -stackThreads=300 -loadedClasses=17066 -poolType=metaspace -vmOptions="$JAVA_OPTS") && echo JVM Memory Configuration: $CALCULATED_MEMORY && JAVA_OPTS="$JAVA_OPTS $CALCULATED_MEMORY" && SERVER_PORT=$PORT eval exec $PWD/.java-buildpack/open_jdk_jre/bin/java $JAVA_OPTS -cp $PWD/. org.springframework.boot.loader.JarLauncher`
+
+Showing health and status for app attendee in org adakids / space dev as .tippabattuni@hotmail.com...
+OK
+
+requested state: started
+instances: 1/1
+usage: 768M x 1 instances
+urls: attendee-nonintercepting-apolune.cfapps.io
+last uploaded: Tue Dec 5 00:06:03 UTC 2017
+stack: cflinuxfs2
+buildpack: java_buildpack
+
+     state     since                    cpu    memory           disk           details
+#0   running   2017-12-04 06:07:05 PM   0.0%   182.7M of 768M   154.9M of 1G
+
